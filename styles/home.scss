@@ -57,6 +57,10 @@
           .css {
             &-1s2u09g-control {
               @apply border-0 focus:border-0 shadow-none border-white font-roboto-regular;
+
+              .css-1wy0on6 {
+                @apply hidden;
+              }
             }
 
             &-1pahdxg-control {
