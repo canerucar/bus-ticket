@@ -1,0 +1,74 @@
+.journey-wrapper {
+  @apply h-screen flex items-center justify-center;
+
+  .content {
+    @apply w-80 h-[568px] bg-branding-gray-200 border border-branding-gray-400 overflow-scroll;
+
+    &::-webkit-scrollbar {
+      @apply hidden; /* for Chrome, Safari, and Opera */
+    }
+
+    &-header {
+      @apply h-[72px] bg-branding-blue flex p-4 text-white;
+
+      &-title {
+        @apply flex-1 text-center font-sans-semibold;
+
+        .top {
+          @apply text-sm;
+        }
+
+        .bottom {
+          @apply text-xs mt-[5px] font-sans-regular;
+        }
+      }
+    }
+
+    &-item {
+      .ticket-wrapper {
+        @apply h-[72px] border border-branding-gray-500 rounded-[3px] m-2 mb-[11px] p-2 pb-[11px];
+
+        &-top {
+          @apply flex;
+
+          .departure {
+            @apply text-center;
+
+            &-title {
+              @apply text-[9px] font-sans-regular text-branding-blue-200;
+            }
+
+            &-clock {
+              @apply text-[15px] text-branding-blue-100 font-sans-semibold;
+            }
+          }
+
+          .icon {
+            @apply self-end pb-[3px] text-branding-blue-100;
+          }
+
+          .arrival {
+            @apply text-center;
+          }
+
+          .price {
+            @apply ml-auto w-[72px] h-[26px] bg-branding-red rounded-[5px] text-white text-sm flex justify-center font-sans-semibold;
+          }
+        }
+
+        &-bottom {
+          @apply text-xs font-sans-regular text-branding-gray-100 mt-[3px];
+        }
+      }
+
+      &-empty {
+        @apply text-center text-sm mt-5;
+      }
+
+      .loading {
+        @apply flex items-center justify-center;
+        height: 50vh;
+      }
+    }
+  }
+}

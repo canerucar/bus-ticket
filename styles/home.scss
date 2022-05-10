@@ -1,0 +1,95 @@
+.main-wrapper {
+  @apply h-screen;
+  
+  .home-wrapper {
+    @apply h-screen flex items-center justify-center;
+
+    .content {
+      @apply w-80 h-[568px] bg-branding-gray-200 border border-branding-gray-400;
+
+      &-header {
+        @apply h-10 bg-branding-blue;
+      }
+
+      &-group {
+        @apply flex items-center flex-col mt-[27px] gap-[3px];
+
+        .date {
+          @apply mt-5;
+        }
+
+        &-item {
+          @apply w-72 h-16 bg-white flex items-center gap-3;
+
+          .icon {
+            @apply pl-2 text-branding-gray-300;
+          }
+
+          &-wrapper {
+            @apply flex-1;
+
+            .react-datepicker-wrapper {
+              @apply ml-[10px] text-[15px] text-branding-gray;
+
+              input {
+                @apply outline-none;
+              }
+            }
+          }
+
+          &-title {
+            @apply text-sm text-branding-blue font-medium mt-[6px] ml-[10px] font-roboto-medium;
+          }
+
+          &-right {
+            @apply flex gap-1 flex-col mr-2 font-roboto-regular;
+
+            .active {
+              @apply bg-branding-gray text-white duration-300;
+            }
+
+            button {
+              @apply w-14 h-6 text-xs rounded-sm border-2 border-branding-gray text-branding-gray;
+            }
+          }
+
+          //react-select class
+          .css {
+            &-1s2u09g-control {
+              @apply border-0 focus:border-0 shadow-none border-white font-roboto-regular;
+            }
+
+            &-1pahdxg-control {
+              @apply border-white shadow-none;
+            }
+
+            &-14el2xx-placeholder {
+              @apply text-[15px];
+            }
+
+            &-1hb7zxy-IndicatorsContainer {
+              @apply hidden;
+            }
+          }
+        }
+
+        &-button {
+          @apply font-roboto-medium;
+
+          button {
+            @apply w-52 h-[41px] rounded bg-branding-blue text-[17px] text-white mt-[21px] mb-[23px];
+            @apply hover:border hover:bg-white hover:text-branding-blue hover:duration-500;
+          }
+        }
+
+        &-footer {
+          @apply p-5 pb-[26px] bg-white text-xs text-branding-gray font-roboto-regular;
+        }
+
+        .error {
+          @apply text-branding-red font-roboto-medium text-center text-xs mb-2;
+        }
+      }
+    }
+  }
+}
